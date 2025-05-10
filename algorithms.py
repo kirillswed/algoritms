@@ -13,6 +13,14 @@ for i in range(n-1):
     for j in range(i+1, n):
         if mas[i] > mas[j]:
             mas[i], mas[j] = mas[j], mas[i]
-    
-         
+
+# insertion sort
+for i in range(1, n):
+    for j in range(i, 0, -1):
+        if mas[j] < mas[j-1]:
+            mas[j], mas[j-1] = mas[j-1], mas[j]
+        else:
+            break
+
+
 print(mas)
