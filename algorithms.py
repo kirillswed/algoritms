@@ -1,5 +1,5 @@
 n = 6
-mas = [5, 7, 4 , 3 , 8, 2]
+mas = [3, 4, 4 , 2 , 1, 2]
 
 
 # bubble
@@ -22,5 +22,22 @@ for i in range(1, n):
         else:
             break
 
+# count sort
+n = 5 # [0, 1, 2, 3, 4]
+count = [0]*n 
+for i in mas:
+    count[i] += 1
+print(count)
 
-print(mas)
+# binary search 
+l, r = 1, 100
+
+while l < r:
+    m = (l + r) // 2
+    resp = input(f'x > {m}? ')
+    if resp == 'yes':
+        l = m + 1
+    else:
+        r = m
+
+print(f'x = {l}')
